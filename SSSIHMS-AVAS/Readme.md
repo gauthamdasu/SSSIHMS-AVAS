@@ -1,4 +1,4 @@
-#							 Om Sri Sairam
+#							 OM SRI SAIRAM
 # SSSIHMS AVAS - Automated Voice Announcement System
 AVAS is an open source contribution from DMACS (Dept. of Mathematics and Computer Science) Sri Sathya Sai Institue Of Higher learning Puttaparthi.
 The main goal of the program is to make a recorded voice announcement for the approriate blood group.
@@ -19,17 +19,16 @@ This Application Automates Voice announcements for blood groups in the Hospital.
 
 For Setting up the Environment: (python v 2.7.*)
 
-===
 Ubuntu Environment :
 sudo apt-get install python-flask
 sudo apt-get install python-pyaudio
 we also use packages like schedule and pygame for pausing and playing while the announcement is being made.
-===
+
 Windows Environment :
 Install Ananconda which is present in the folder
 Install pyaudio which is also present in the folder
 Install the schedule and pygame using wheel files present in the folder.
-===
+
 
 
 Directory Structure:
@@ -43,11 +42,9 @@ playlists ->	contains the songs for every day to be played.
 Packages to 
 be installed -> contains a text file which has gives which packages are to be installed for running our program
 This program will be runned in the directory where the playlists are present in the system
-===
 
-==============================================================================================================================================
 About the program:
-  
+==================  
     -> This AVAS program is a python based simple server client program where the server is locally hosted in the lan of the hospital and 	 any user can connect to the server with the server ip and a dedicated port no:5000.
     -> The user gets the web interface and can submit a request to the server.
     -> In the background the songs scheduled for the day will be played and when the request comes the music pauses makes the announcement  	   and plays the music back after the announcement.
@@ -57,11 +54,9 @@ About the program:
     -> To run the program in windows enviroment go to the press windows+r and enter cmd 
 	.press cd Desktop
 	.press the desired folder and enter python avas.py		
-==============================================================================================================================================
 
 
 
-====
 NOTE:
 =====
 
