@@ -1,8 +1,20 @@
-Om Sri Sairam,
+#							 Om Sri Sairam
+# SSSIHMS AVAS - Automated Voice Announcement System
+AVAS is an open source contribution from DMACS (Dept. of Mathematics and Computer Science) Sri Sathya Sai Institue Of Higher learning Puttaparthi.
+The main goal of the program is to make a recorded voice announcement for the approriate blood group.
+There is a server running which serves the client through the webpages and when a request is made then the appropriate voice announcement is made.
+
+The work flow of the module is given as below diagram :
+
+In our particular case of SSSIHMS a continous stream of music(Bhajans) are played. So when a request for the blood requirements are made
+then the music is paused and the announcement is made and then is unpaused.
+
+From the diagram we see that a python flask based webserver is running continiously, clients can be connected to the server through a web
+interface and using their credentials they can log in and make the request for the blood.
+Other details are as below:
 
 The name of this Application is AVAS(Automated Voice Announcement System).
 This Application Automates Voice announcements for blood groups in the Hospital.
-
 
 
 For Setting up the Environment: (python v 2.7.*)
@@ -66,9 +78,9 @@ For removing the user you can follow the above step of removing the correspondin
 CONTACT:
 ========
 
-For any clarification please drop in a mail at vsuriya93@gmail.com
+For any clarification please drop in a mail at vsuriya93@gmail.com, gauthamdasu@gmail.com
 
 Thanking Swami for giving us this opportunity to serve him,
 
 Regards,
-SSSIHL and SSSIHMS
+SSSIHL and SSSIHMSS
