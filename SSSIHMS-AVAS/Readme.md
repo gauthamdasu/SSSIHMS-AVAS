@@ -5,7 +5,7 @@ The main goal of the program is to make a recorded voice announcement for the ap
 There is a server running which serves the client through the webpages and when a request is made then the appropriate voice announcement is made.
 
 The work flow of the module is given as below diagram :
-! [AVAS Outline](avas_outline.png) 
+![AVAS LOGO](https://raw.githubusercontent.com/gauthamdasu/SSSIHMS-AVAS/master/SSSIHMS-AVAS/avas_outline.png) 
 
 In our particular case of SSSIHMS a continous stream of music(Bhajans) are played. So when a request for the blood requirements are made
 then the music is paused and the announcement is made and then is unpaused.
