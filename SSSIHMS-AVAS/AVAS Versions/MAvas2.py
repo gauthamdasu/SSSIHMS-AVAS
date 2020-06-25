@@ -56,14 +56,6 @@ if(urllib.urlopen(url).getcode()!=200):
 pygame.mixer.pre_init(44100, 16, 2, 4096)
 pygame.mixer.init()
 songNo=0
-
-
-
-
-
-
-
-
 #The module for the automation of the bhajans will be done from here
 #first find the current day.Based on the day play that particular platlist from time 5:00 am to 6:00 pm 
 #we use schedule package for this purpose.
@@ -111,10 +103,6 @@ def day():
 	# Get the playlist for the particular day.
 	playlist = os.listdir('./playlist/'+ day)
 	return playlist,day
-
-
-
-
 
 #main function for songs playing
 def play(filename,day):
@@ -192,11 +180,13 @@ def user_box(msg):
 	fieldValues = []  
 	fieldValues = multpasswordbox(msg,title, fieldNames)	
 	print fieldValues[0]
+	
 #To make sure that none of the fields was left blank
 	while 1:  # do forever, until we find acceptable values and break out
 		if fieldValues == None: 
         		break
-		errmsg = ""    
+		errmsg = ""
+    
     # look for errors in the returned values
 		for i in range(len(fieldNames)):
 			if fieldValues[i].strip() == "":
@@ -255,7 +245,6 @@ def Admin_box():
 		   
 #def avas():
 #authenticates the user for logging in.
-
 def authenticate_user(credentials):
 	#session['username']=credentials['uname']
 	fp = open('user/user_details.txt','r')
@@ -381,6 +370,75 @@ def play_audio(path):
 	stream.close()  
 	p.terminate() 
 
+def play_all_blood_audio():
+	path = 'audio/bloodgroup/'+'ALL'+str('.wav')
+	play_audio(path)
+	play_audio('audio/2.wav')
+	play_audio('audio/7.wav')
+	play_audio('audio/6.wav')
+
+def play_blood_names(result):
+	i=1
+	for element in result:
+		path = 'audio/bloodgroup/'+str(element)+str('.wav')
+		print path		
+		play_audio(path)
+		if ((len(result))!=i):		
+			play_audio('audio/and.wav')
+		i=i+1
+
+
+
+
+def play_blood_groups(result):
+	i=1
+	for element in result:
+		path = 'audio/bloodgroup/'+str(element)+str('.wav')	
+		play_audio(path)
+		play_audio('audio/only_groups/bloodgroup.wav')		
+		if ((len(result))!=i):		
+			play_audio('audio/and.wav')
+		i=i+1
+
+
+
+
+
+def play_group(result):
+	i=1
+	for element in result:
+		path = 'audio/only_groups/'+str(element)+str('.wav')
+		print path		
+		play_audio(path)
+		if ((len(result))!=i):		
+			play_audio('audio/and.wav')
+		i=i+1
+
+
+
+
+
+
+
+def play_individual_blood_audio(result):
+	
+	play_blood_names(result) #plays names of checked blood groups
+	time.sleep(0.7)	
+	play_audio('audio/2.wav')
+	time.sleep(0.5)
+	play_audio('audio/3.wav')
+	time.sleep(0.5)	
+	play_group(result)
+	time.sleep(0.5)
+	#play_audio('audio/Group.wav')
+	if len(result)>1:
+		play_audio('audio/only_groups/bloodgroups.wav')
+	if len(result)==1:		
+		play_audio('audio/only_groups/bloodgroup.wav')		
+	time.sleep(0.5)	
+	play_audio('audio/5.wav')
+	time.sleep(0.5)	
+	play_audio('audio/6.wav')
 
 
 
